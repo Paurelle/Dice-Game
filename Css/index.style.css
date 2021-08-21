@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(153, 104, 61, 0.8);
+    font-size: 32px;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1100px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 50px rgb(0, 0, 0, 50%);
+}
+
+/* Player */
+
+.player-1, .player-2{
+    height: 650px;
+    padding: 80px;
+}
+
+.active-bg { 
+    background-color: rgb(247, 247, 247);
+}
+
+.player-name{
+    position: relative;
+    color: rgb(101, 101, 101);
+    font-size: 50px;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.icon-name1{
+    visibility: visible;
+    position: relative;
+    color: rgb(235, 77, 76);
+    font-size: 15px;
+    bottom: 10px;
+}
+
+.icon-name2{
+    visibility: hidden;
+    position: relative;
+    color: rgb(235, 77, 76);
+    font-size: 15px;
+    bottom: 10px;
+}
+
+.global-score{
+    text-align: center;
+    font-size: 100px;
+    font-weight: 100;
+    color: rgb(235, 77, 76);
+    margin-bottom: 130px;
+}
+
+.box-round{
+    background-color: rgb(235, 77, 76);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    
+}
+
+.round-label{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: rgb(35, 35, 35);
+}
+
+.round-score{
+    font-size: 30px;
+}
+
+/* Button + icon */
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(101, 101, 101);
+    background: none;
+    border: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.icon-button{
+    position: relative;
+    color: rgb(235, 77, 76);
+    font-size: 32px;
+    margin-right: 15px;
+    top: 3px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover { 
+    font-weight: 600; 
+}
+
+button:hover i{ 
+    color: rgb(255, 0, 0);
+}
+
+button:active {
+    font-weight: 100; 
+}
+
+button:active i{ 
+    color: rgb(235, 77, 76);
+}
+
+.new{
+    top: 40px;
+}
+
+.roll{
+    top: 430px;
+}
+
+.hold{
+    top: 515px;
+}
+
+/* Dice */
+
+.dice{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 190px;
+    width: 120px;
+    height: 120px;
+}
+
+.bi-dice-1, .bi-dice-2, .bi-dice-3, 
+.bi-dice-4, .bi-dice-5, .bi-dice-6{
+    position: absolute;
+    visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px rgb(0, 0, 0, 10%);
+    color: rgb(235, 77, 76);
+}
