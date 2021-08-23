@@ -21,6 +21,34 @@ hold.addEventListener('click', event => {
 });
 
 
+/*-------- Functions --------*/ 
+
+function rollDice(){
+    number = Math.floor((Math.random()*6)+ 1);
+    return number;
+}
+
+function changeTurn(){
+    if (player1.turn === true) {
+        player1.turn = false;
+        player2.turn = true;
+    }
+    else{
+        player1.turn = true;
+        player2.turn = false;
+    }
+}
+
+function checkTurnPlayer(){
+    if (player1.turn === true) {
+        return player1;
+    }
+    else{
+        return player2;
+    }
+}
+
+
 /*---------- Class ----------*/ 
 
 class Player {
