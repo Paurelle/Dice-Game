@@ -10,13 +10,13 @@ new_game.addEventListener('click', event => {
 
 roll_dice.addEventListener('click', event => {
     if (gameEnd === false) {
-        
+        checkTurnPlayer().playerPoint(rollDice(), false);
     }
 });
 
 hold.addEventListener('click', event => {
     if (gameEnd === false) {
-        
+        checkTurnPlayer().playerPoint(0, true);  
     }
 });
 
@@ -57,6 +57,25 @@ class Player {
       this.score_global = global;
       this.turn = turnPlayer;
       this.id = player;
+    }
+    playerPoint(score_roll, hold){
+        if (score_roll === 1) {
+            this.score_round = 0;
+            changeTurn();
+        }
+        else if(hold === true){
+            this.score_global += this.score_round;
+            this.score_round = 0;
+            changeTurn();
+        }
+        else{
+            this.score_round += score_roll;
+        }
+        ATH(this.id, this.score_round, this.score_global);
+        if (this.score_global >= 100) {
+            changeTurn();
+            gameEnd = true;
+        }
     }
 }
 
