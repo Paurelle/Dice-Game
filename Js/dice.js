@@ -5,7 +5,7 @@ const roll_dice = document.getElementById("roll-dice");
 const hold = document.getElementById("hold");
 
 new_game.addEventListener('click', event => {
-    
+    gameRestart();
 });
 
 roll_dice.addEventListener('click', event => {
@@ -46,6 +46,19 @@ function checkTurnPlayer(){
     else{
         return player2;
     }
+}
+
+
+
+function gameRestart(){
+    
+    player1.score_round = 0;
+    player1.score_global = 0;
+    player1.turn = true;
+    player2.score_round = 0;
+    player2.score_global = 0;
+    player2.turn = false;
+    gameEnd = false;
 }
 
 
