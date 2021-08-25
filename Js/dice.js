@@ -1,3 +1,4 @@
+
 /*---------- EVENT ----------*/ 
 
 const new_game = document.getElementById("new-game");
@@ -25,6 +26,7 @@ hold.addEventListener('click', event => {
 
 function rollDice(){
     number = Math.floor((Math.random()*6)+ 1);
+    dicePoster(number);
     return number;
 }
 
@@ -81,8 +83,22 @@ function ATH(player, round, global){
     }
 }
 
+function dicePoster(number){
+    for (let i = 1; i <= 6; i++) {
+        let dice = document.getElementById(i);
+            dice.style.visibility = 'hidden';
+            dice.style.position = 'absolute';
+    }
+    let diceX = document.getElementById(number);
+        diceX.style.visibility = 'visible';
+        diceX.style.position = 'relative';
+}
+
+
+/*---- Functions restart ----*/ 
+
 function gameRestart(){
-    
+    dicePoster(0);
     player1.score_round = 0;
     player1.score_global = 0;
     player1.turn = true;
