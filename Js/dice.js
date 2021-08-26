@@ -10,13 +10,14 @@ new_game.addEventListener('click', event => {
 });
 
 roll_dice.addEventListener('click', event => {
-    if (gameEnd === false) {
+
+    if (!gameEnd) {
         checkTurnPlayer().playerPoint(rollDice(), false);
     }
 });
 
 hold.addEventListener('click', event => {
-    if (gameEnd === false) {
+    if (!gameEnd) {
         checkTurnPlayer().playerPoint(0, true);  
     }
 });
@@ -31,7 +32,7 @@ function rollDice(){
 }
 
 function changeTurn(){
-    if (player1.turn === true) {
+    if (player1.turn) {
         player1.turn = false;
         player2.turn = true;
     }
@@ -42,7 +43,7 @@ function changeTurn(){
 }
 
 function checkTurnPlayer(){
-    if (player1.turn === true) {
+    if (player1.turn) {
         return player1;
     }
     else{
@@ -126,7 +127,7 @@ class Player {
             this.score_round = 0;
             changeTurn();
         }
-        else if(hold === true){
+        else if(hold){
             this.score_global += this.score_round;
             this.score_round = 0;
             changeTurn();
