@@ -2,9 +2,11 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="jeu de dés a 2 joueur" />
         <link rel="stylesheet" href="Images/bootstrap-4.4.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="Css/index.style.css">
+        <link rel="icon" type="image/x-icon" href="Images/dés.icon">
         <title>Dice game</title>
     </head>
     <body>
